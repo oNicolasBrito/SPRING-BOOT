@@ -1,11 +1,13 @@
 package br.com.exemplo.api.modelo;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity 
 public class Pessoa {
+    private int codigo;
     private String nome;
     private int idade;
     @Id
@@ -22,8 +24,14 @@ public class Pessoa {
     public void setIdade(int idade) {
         this.idade = idade;
     }
-
+    public int getCodigo() {
+        return codigo;
+    }
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
     
-
+    
+    
     
 }
